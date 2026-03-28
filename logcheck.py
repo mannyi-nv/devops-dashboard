@@ -18,8 +18,9 @@ def check_log():
                     else:
                         print(f"\nNo 'ERROR' found in the log file.")
         except FileNotFoundError:
-            print(f"\nFile '{file_log}' not found. Please try again.")
-            continue
+            print(f"\nFile '{file_log}' not found.")
+            if input(f"\nDo you want to try again? (YES / NO): ").lower() != 'yes':
+                break
         
 
         
