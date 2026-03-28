@@ -1,3 +1,6 @@
+import sysinfo
+import logcheck
+import tasklist
 
 while True:
     try:
@@ -13,11 +16,11 @@ while True:
         choice = input("\nSelect an option (1-3): ")
 
         if choice == "1":
-            print(f"\n Comming soon....")
+            sysinfo.show_sysinfo()
         elif choice == "2":
-            print(f"\n Comming soon....")
+            logcheck.check_log()
         elif choice == "3":
-            print(f"\n Comming soon....")
+            tasklist.manage_tasks()
         elif choice == "0":
             print("\nExiting the program.")
             break
